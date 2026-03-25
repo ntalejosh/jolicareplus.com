@@ -459,7 +459,7 @@ const nav=document.getElementById('nav'),btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60);btt.classList.toggle('show',scrollY>500);});
 function toggleM(){document.getElementById('menu').classList.toggle('open');}
 function closeM(){document.getElementById('menu').classList.remove('open');}
-const obs=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add('visible');});},{threshold:.15});
+const obs=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add('visible');});},{threshold:.02,rootMargin:'0px 0px 80px 0px'});
 document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
 </script>
 </body>
