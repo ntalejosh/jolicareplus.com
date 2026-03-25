@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care in Lowell, MA | JOLI Care Plus</title>
+    <meta name="description" content="JOLI Care Plus provides compassionate home health care services for seniors in Lowell and Merrimack Valley, MA. Professional in-home care for northern Massachusetts.">
+    <meta name="keywords" content="home care Lowell MA, Merrimack Valley senior care, home health care northern MA, elder care Lowell">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .navy { color: #012d5a; }
+        .blue { color: #0067b1; }
+        .gold { color: #f6bd38; }
+        .bg-navy { background-color: #012d5a; }
+        .bg-blue { background-color: #0067b1; }
+        .bg-gold { background-color: #f6bd38; }
+
+        header {
+            background-color: #012d5a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #f6bd38;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #012d5a 0%, #0067b1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #0067b1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #012d5a;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .why-choose {
+            background-color: #f0f7ff;
+        }
+        .why-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .why-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #333;
+        }
+        .why-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f6bd38;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .contact-section {
+            background-color: #0067b1;
+            color: white;
+            text-align: center;
+        }
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #f6bd38;
+        }
+        .contact-link {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+        .contact-link:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #012d5a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">JOLI Care Plus</div>
+            <a href="https://jolicareplus.com" class="nav-link">Back to Main Site</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Home Care in Lowell, MA</h1>
+            <p>Dedicated in-home health care services for seniors throughout Lowell and the Merrimack Valley. Professional, compassionate care in northern Massachusetts.</p>
+            <a href="https://jolicareplus.com/contact" class="cta-button">Request Care Today</a>
+        </div>
+    </section>
+
+    <section class="about section">
+        <div class="about-content">
+            <h2 class="section-title navy">Trusted Home Care in Historic Lowell</h2>
+            <p>Lowell's rich history as a mill city is built on hard work, community, and resilience. We honor those values in every interaction. JOLI Care Plus understands the Merrimack Valley's strong family traditions and provides home care that respects the dignity and independence important to our neighbors.</p>
+            <p>From Lowell's neighborhoods to surrounding Merrimack Valley communities, we're proud to serve families who want their loved ones cared for at home with professional expertise and genuine compassion.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title navy">Home Care Services for Lowell Families</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Skilled Nursing Services</h3>
+                <p>Licensed nurses providing medical care, medication management, and health monitoring.</p>
+            </div>
+            <div class="service-card">
+                <h3>Chronic Disease Management</h3>
+                <p>Specialized care for diabetes, heart disease, COPD, and other ongoing conditions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Daily Living Assistance</h3>
+                <p>Bathing, dressing, grooming, and toileting support with sensitivity and respect.</p>
+            </div>
+            <div class="service-card">
+                <h3>Wound Care & Dressings</h3>
+                <p>Professional wound management to support healing and prevent complications.</p>
+            </div>
+            <div class="service-card">
+                <h3>Caregiver Support & Training</h3>
+                <p>Education and guidance for family members managing care responsibilities.</p>
+            </div>
+            <div class="service-card">
+                <h3>Occupational Therapy</h3>
+                <p>Specialized support for mobility, adaptation, and independence in daily activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose section">
+        <h2 class="section-title navy">Why Choose JOLI Care Plus for Merrimack Valley Home Care</h2>
+        <ul class="why-list">
+            <li>Deep understanding of northern Massachusetts healthcare and community</li>
+            <li>Skilled caregivers trained in complex medical needs and chronic conditions</li>
+            <li>Flexible hours to support working family members and varying schedules</li>
+            <li>Commitment to honoring family traditions and cultural preferences</li>
+            <li>Professional coordination with local hospitals and physicians</li>
+            <li>Competitive rates with transparent, honest pricing</li>
+            <li>References from satisfied Lowell and Merrimack Valley families</li>
+        </ul>
+    </section>
+
+    <section class="contact-section section">
+        <div class="contact-content">
+            <h2 class="section-title" style="color: white;">Get in Touch Today</h2>
+            <p>Discuss your home care needs with JOLI Care Plus. We're here to help families in Lowell and the Merrimack Valley.</p>
+            <div class="phone-number">(508) 375-5781</div>
+            <a href="https://jolicareplus.com/contact" class="contact-link">Fill Out Contact Form</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>JOLI Care Plus</strong></p>
+            <p>809 Boylston St Apt 2, Chestnut Hill, MA 02467</p>
+            <p>(508) 375-5781</p>
+            <p>&copy; 2026 JOLI Care Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "JOLI Care Plus - Lowell",
+        "description": "Home health care services in Lowell and Merrimack Valley, MA",
+        "url": "https://jolicareplus.com",
+        "telephone": "(508) 375-5781",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "809 Boylston St Apt 2",
+            "addressLocality": "Chestnut Hill",
+            "addressRegion": "MA",
+            "postalCode": "02467"
+        },
+        "areaServed": "Lowell, MA",
+        "serviceType": "Home Health Care"
+    }
+    </script>
+</body>
+</html>

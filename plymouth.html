@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care in Plymouth, MA | JOLI Care Plus</title>
+    <meta name="description" content="JOLI Care Plus provides premium home health care services in Plymouth, MA and the South Shore. Compassionate in-home care for seniors near Plymouth Rock.">
+    <meta name="keywords" content="home care Plymouth MA, South Shore senior care, Plymouth Rock, home health care MA, elder care South Shore">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .navy { color: #012d5a; }
+        .blue { color: #0067b1; }
+        .gold { color: #f6bd38; }
+        .bg-navy { background-color: #012d5a; }
+        .bg-blue { background-color: #0067b1; }
+        .bg-gold { background-color: #f6bd38; }
+
+        header {
+            background-color: #012d5a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #f6bd38;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #012d5a 0%, #0067b1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #0067b1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #012d5a;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .why-choose {
+            background-color: #f0f7ff;
+        }
+        .why-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .why-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #333;
+        }
+        .why-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f6bd38;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .contact-section {
+            background-color: #0067b1;
+            color: white;
+            text-align: center;
+        }
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #f6bd38;
+        }
+        .contact-link {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+        .contact-link:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #012d5a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">JOLI Care Plus</div>
+            <a href="https://jolicareplus.com" class="nav-link">Back to Main Site</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Home Care in Plymouth, MA</h1>
+            <p>Quality in-home health care for seniors in Plymouth and the South Shore. We bring professional medical care and compassion to your home.</p>
+            <a href="https://jolicareplus.com/contact" class="cta-button">Request Care Today</a>
+        </div>
+    </section>
+
+    <section class="about section">
+        <div class="about-content">
+            <h2 class="section-title navy">Home Care with Historic South Shore Roots</h2>
+            <p>Plymouth's heritage of community and pioneering spirit lives on in its residents today. JOLI Care Plus honors that legacy by providing exceptional home care that allows seniors to maintain independence, stay connected to their community, and receive professional support right where they belong—at home.</p>
+            <p>Whether you live near Plymouth Rock, throughout the South Shore, or in surrounding communities, we're committed to delivering trustworthy, professional care that your family can count on.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title navy">Our Plymouth Home Care Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Nursing & Medical Support</h3>
+                <p>Registered nurses providing care coordination, assessments, and medical supervision.</p>
+            </div>
+            <div class="service-card">
+                <h3>Recovery & Rehabilitation</h3>
+                <p>Post-hospital support and rehabilitation services to restore strength and function.</p>
+            </div>
+            <div class="service-card">
+                <h3>Personal Care & Hygiene</h3>
+                <p>Respectful assistance with bathing, dressing, grooming, and daily hygiene.</p>
+            </div>
+            <div class="service-card">
+                <h3>Nutrition & Meal Prep</h3>
+                <p>Meal planning and preparation aligned with medical dietary requirements.</p>
+            </div>
+            <div class="service-card">
+                <h3>Alzheimer's & Dementia Care</h3>
+                <p>Specialized trained caregivers providing safe, compassionate memory care support.</p>
+            </div>
+            <div class="service-card">
+                <h3>Fall Prevention & Safety</h3>
+                <p>Home assessment and support to reduce fall risks and maintain a safe environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose section">
+        <h2 class="section-title navy">Why Choose JOLI Care Plus for South Shore Home Care</h2>
+        <ul class="why-list">
+            <li>Proven track record serving Plymouth and South Shore families</li>
+            <li>Licensed, insured, and thoroughly screened caregivers</li>
+            <li>Flexible scheduling that adapts to your family's lifestyle</li>
+            <li>Medical expertise combined with genuine compassion and respect</li>
+            <li>Personalized care plans created with your family's input</li>
+            <li>Strong relationships with local healthcare providers and hospitals</li>
+            <li>24/7 availability and responsive care coordination</li>
+        </ul>
+    </section>
+
+    <section class="contact-section section">
+        <div class="contact-content">
+            <h2 class="section-title" style="color: white;">Connect With Us Today</h2>
+            <p>Let's talk about how JOLI Care Plus can support your loved one with quality in-home care in Plymouth.</p>
+            <div class="phone-number">(508) 375-5781</div>
+            <a href="https://jolicareplus.com/contact" class="contact-link">Fill Out Contact Form</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>JOLI Care Plus</strong></p>
+            <p>809 Boylston St Apt 2, Chestnut Hill, MA 02467</p>
+            <p>(508) 375-5781</p>
+            <p>&copy; 2026 JOLI Care Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "JOLI Care Plus - Plymouth",
+        "description": "Home health care services in Plymouth and South Shore, MA",
+        "url": "https://jolicareplus.com",
+        "telephone": "(508) 375-5781",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "809 Boylston St Apt 2",
+            "addressLocality": "Chestnut Hill",
+            "addressRegion": "MA",
+            "postalCode": "02467"
+        },
+        "areaServed": "Plymouth, MA",
+        "serviceType": "Home Health Care"
+    }
+    </script>
+</body>
+</html>

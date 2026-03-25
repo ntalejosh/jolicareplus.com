@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care in Brockton, MA | JOLI Care Plus</title>
+    <meta name="description" content="JOLI Care Plus provides compassionate home health care services for seniors in Brockton, MA. Serving the City of Champions with personalized care plans.">
+    <meta name="keywords" content="home care Brockton MA, senior care Brockton, home health care, elder care services">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .navy { color: #012d5a; }
+        .blue { color: #0067b1; }
+        .gold { color: #f6bd38; }
+        .bg-navy { background-color: #012d5a; }
+        .bg-blue { background-color: #0067b1; }
+        .bg-gold { background-color: #f6bd38; }
+
+        header {
+            background-color: #012d5a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #f6bd38;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #012d5a 0%, #0067b1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #0067b1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #012d5a;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .why-choose {
+            background-color: #f0f7ff;
+        }
+        .why-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .why-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1rem;
+            color: #333;
+        }
+        .why-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f6bd38;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .contact-section {
+            background-color: #0067b1;
+            color: white;
+            text-align: center;
+        }
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #f6bd38;
+        }
+        .contact-link {
+            display: inline-block;
+            background-color: #f6bd38;
+            color: #012d5a;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+        .contact-link:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #012d5a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">JOLI Care Plus</div>
+            <a href="https://jolicareplus.com" class="nav-link">Back to Main Site</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Home Care in Brockton, MA</h1>
+            <p>Compassionate in-home health care for seniors and families in the City of Champions. JOLI Care Plus brings personalized care to your doorstep.</p>
+            <a href="https://jolicareplus.com/contact" class="cta-button">Request Care Today</a>
+        </div>
+    </section>
+
+    <section class="about section">
+        <div class="about-content">
+            <h2 class="section-title navy">About Our Brockton Care Services</h2>
+            <p>For over a decade, JOLI Care Plus has been honored to serve the Brockton community with excellence and compassion. We understand the unique needs of southeastern Massachusetts families and provide tailored home health care solutions that keep your loved ones safe, comfortable, and independent at home.</p>
+            <p>As a trusted partner in Brockton's health care landscape, we're committed to delivering professional, dignified care that respects the values and traditions important to you.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title navy">Our Home Care Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Skilled Nursing Care</h3>
+                <p>Medication management, wound care, and medical monitoring provided by licensed nurses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Personal Care Assistance</h3>
+                <p>Bathing, dressing, toileting, and mobility support with dignity and respect.</p>
+            </div>
+            <div class="service-card">
+                <h3>Companionship Care</h3>
+                <p>Social engagement, meal preparation, and daily living support to reduce isolation.</p>
+            </div>
+            <div class="service-card">
+                <h3>Physical Therapy</h3>
+                <p>Rehabilitation and mobility exercises to restore strength and independence.</p>
+            </div>
+            <div class="service-card">
+                <h3>Dementia Care</h3>
+                <p>Specialized support for memory care and behavioral needs with trained caregivers.</p>
+            </div>
+            <div class="service-card">
+                <h3>Post-Hospital Care</h3>
+                <p>Seamless transition home with professional recovery support and monitoring.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose section">
+        <h2 class="section-title navy">Why Choose JOLI Care Plus for Brockton Home Care</h2>
+        <ul class="why-list">
+            <li>Licensed, insured, and background-checked caregivers you can trust</li>
+            <li>Flexible scheduling that fits your family's needs and budget</li>
+            <li>Local knowledge of Brockton's health care community and resources</li>
+            <li>24/7 support with responsive, professional care coordinators</li>
+            <li>Customized care plans developed with your input and preferences</li>
+            <li>Transparent pricing with no hidden fees or surprise charges</li>
+            <li>Family-owned dedication to quality care and genuine relationships</li>
+        </ul>
+    </section>
+
+    <section class="contact-section section">
+        <div class="contact-content">
+            <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
+            <p>Contact JOLI Care Plus today to discuss your home care needs in Brockton.</p>
+            <div class="phone-number">(508) 375-5781</div>
+            <a href="https://jolicareplus.com/contact" class="contact-link">Fill Out Contact Form</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>JOLI Care Plus</strong></p>
+            <p>809 Boylston St Apt 2, Chestnut Hill, MA 02467</p>
+            <p>(508) 375-5781</p>
+            <p>&copy; 2026 JOLI Care Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "JOLI Care Plus - Brockton",
+        "description": "Home health care services in Brockton, MA",
+        "url": "https://jolicareplus.com",
+        "telephone": "(508) 375-5781",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "809 Boylston St Apt 2",
+            "addressLocality": "Chestnut Hill",
+            "addressRegion": "MA",
+            "postalCode": "02467"
+        },
+        "areaServed": "Brockton, MA",
+        "serviceType": "Home Health Care"
+    }
+    </script>
+</body>
+</html>
