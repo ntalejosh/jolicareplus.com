@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOLI Care Plus | Connecting Caring Hearts with Trusted Hands</title>
-    <meta name="description" content="JOLI Care Plus is a licensed Massachusetts home health care agency providing personalized, compassionate in-home care services.">
+    <meta name="description" content="JOLI Care Plus is a licensed Massachusetts home health care agency providing personalized, compassionate in-home care services. Serving all of Massachusetts. Call (508) 375-5781.">
+    <meta name="keywords" content="home care Massachusetts, home health aide, in-home care, elder care, Chestnut Hill home care, Boston home care, personal care aide, dementia care, Alzheimer's care, companion care">
+    <meta property="og:title" content="JOLI Care Plus | Compassionate In-Home Care Across Massachusetts">
+    <meta property="og:description" content="Licensed Massachusetts home health care agency. Personalized in-home care for your loved ones. Call (508) 375-5781 for a free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jolicareplus.com">
+    <meta property="og:locale" content="en_US">
+    <link rel="canonical" href="https://jolicareplus.com">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeHealthCareService",
+      "name": "JOLI Care Plus",
+      "url": "https://jolicareplus.com",
+      "telephone": "+1-508-375-5781",
+      "email": "joshua@jolicareplus.com",
+      "description": "Licensed Massachusetts home health care agency providing personalized, compassionate in-home care services including personal care, companionship, mobility assistance, health monitoring, and more.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "809 Boylston St Apt 2",
+        "addressLocality": "Chestnut Hill",
+        "addressRegion": "MA",
+        "postalCode": "02467",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3317,
+        "longitude": -71.1653
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Massachusetts"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "serviceType": ["Personal Care","Companionship","Mobility Assistance","Health Monitoring","Medication Support","Household Support","Transportation","Care Documentation"],
+      "paymentAccepted": ["MassHealth","Medicare","Private Pay","Long-Term Care Insurance"],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3"
+      },
+      "sameAs": []
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -189,6 +241,37 @@
         .btt.show { opacity: 1; transform: translateY(0); }
         .btt:hover { background: var(--accent); }
 
+        /* How It Works */
+        .hiw { background: var(--cream); }
+        .hiw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+        .hiw-grid::before { content: ''; position: absolute; top: 60px; left: 16%; right: 16%; height: 2px; background: var(--border); z-index: 0; }
+        .hiw-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
+        .hiw-num { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(0,103,177,.2); border: 4px solid var(--cream); }
+        .hiw-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .hiw-step p { font-size: .88rem; color: var(--text-light); line-height: 1.75; }
+
+        /* Payment Info */
+        .pay-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 48px 0; }
+        .pay-inner { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+        .pay-label { font-size: .72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); }
+        .pay-items { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .pay-tag { background: var(--cream); border: 1px solid var(--border); border-radius: 100px; padding: 10px 22px; font-size: .85rem; font-weight: 600; color: var(--deep-brown); display: flex; align-items: center; gap: 8px; }
+        .pay-tag svg { width: 16px; height: 16px; color: var(--accent); }
+
+        /* Service Area */
+        .svc-area { background: var(--deep-brown); padding: 72px 0; text-align: center; }
+        .svc-area h2 { color: #fff; margin-bottom: 12px; }
+        .svc-area > .container > p { color: rgba(255,255,255,.5); font-size: 1rem; max-width: 520px; margin: 0 auto 36px; }
+        .area-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 800px; margin: 0 auto; }
+        .area-pill { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.7); padding: 8px 20px; border-radius: 100px; font-size: .82rem; font-weight: 500; transition: all .3s; }
+        .area-pill:hover { background: rgba(255,255,255,.14); color: #fff; }
+        .area-note { margin-top: 24px; font-size: .82rem; color: rgba(255,255,255,.35); }
+
+        /* Mobile sticky call button */
+        .sticky-call { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--accent); padding: 0; }
+        .sticky-call a { display: flex; align-items: center; justify-content: center; gap: 10px; color: #fff; font-weight: 700; font-size: .95rem; padding: 16px; text-decoration: none; width: 100%; }
+        .sticky-call svg { width: 20px; height: 20px; }
+
         @media(max-width:1024px) {
             .hero-inner { padding: 140px 0 100px; text-align: center; }
             .hero-p { margin: 0 auto 40px; }
@@ -200,6 +283,12 @@
             .f-grid { grid-template-columns: 1fr 1fr; }
         }
         @media(max-width:768px) {
+            .sticky-call { display: block; }
+            body { padding-bottom: 56px; }
+            .btt { bottom: 72px; }
+            .hiw-grid { grid-template-columns: 1fr; gap: 32px; }
+            .hiw-grid::before { display: none; }
+            .pay-inner { flex-direction: column; gap: 16px; }
             .nav-links { display: none; position: fixed; inset: 0; background: rgba(1,45,90,.97); backdrop-filter: blur(20px); flex-direction: column; justify-content: center; align-items: center; gap: 36px; z-index: 1000; }
             .nav-links.open { display: flex; }
             .nav-links a { color: rgba(255,255,255,.8) !important; font-size: 1.3rem; font-weight: 700; }
@@ -265,6 +354,8 @@
             <div class="t-item">HIPAA Compliant</div>
             <div class="t-item">Background Checked Staff</div>
             <div class="t-item">Individualized Care Plans</div>
+            <div class="t-item">Serving All of Massachusetts</div>
+            <div class="t-item">We Respond Within 2 Hours</div>
         </div>
     </div>
 </div>
@@ -332,6 +423,33 @@
     </div>
 </section>
 
+<section class="hiw section" id="how-it-works">
+    <div class="container">
+        <div class="s-head center">
+            <span class="s-label">Getting Started</span>
+            <h2>Care Begins in 3 Simple Steps</h2>
+            <p>We make starting home care easy and stress-free for your family.</p>
+        </div>
+        <div class="hiw-grid">
+            <div class="hiw-step reveal">
+                <div class="hiw-num">1</div>
+                <h3>Free Consultation</h3>
+                <p>Call us or fill out our form. We'll listen to your needs and answer every question — no pressure, no obligation.</p>
+            </div>
+            <div class="hiw-step reveal rd1">
+                <div class="hiw-num">2</div>
+                <h3>Personalized Care Plan</h3>
+                <p>We visit your loved one at home, assess their needs, and create a customized care plan together with your family.</p>
+            </div>
+            <div class="hiw-step reveal rd2">
+                <div class="hiw-num">3</div>
+                <h3>Care Begins</h3>
+                <p>We match your loved one with the perfect caregiver and start delivering compassionate, professional care — right at home.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="why section" id="why">
     <div class="container">
         <div class="s-head center">
@@ -361,6 +479,20 @@
         </div>
     </div>
 </section>
+
+<div class="pay-bar">
+    <div class="container">
+        <div class="pay-inner">
+            <span class="pay-label">Accepted Payment</span>
+            <div class="pay-items">
+                <div class="pay-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> MassHealth / Medicaid</div>
+                <div class="pay-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Medicare</div>
+                <div class="pay-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Private Pay</div>
+                <div class="pay-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Long-Term Care Insurance</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="cta">
     <div class="container">
@@ -398,6 +530,32 @@
         </div>
     </div>
 </section>
+
+<div class="svc-area">
+    <div class="container">
+        <span class="s-label" style="color:rgba(255,255,255,.5);">Where We Serve</span>
+        <h2>Proudly Serving All of Massachusetts</h2>
+        <p>From Boston to the Berkshires, we bring compassionate in-home care to families across the Commonwealth.</p>
+        <div class="area-pills">
+            <span class="area-pill">Boston</span>
+            <span class="area-pill">Chestnut Hill</span>
+            <span class="area-pill">Brookline</span>
+            <span class="area-pill">Newton</span>
+            <span class="area-pill">Cambridge</span>
+            <span class="area-pill">Somerville</span>
+            <span class="area-pill">Worcester</span>
+            <span class="area-pill">Springfield</span>
+            <span class="area-pill">Quincy</span>
+            <span class="area-pill">Brockton</span>
+            <span class="area-pill">Plymouth</span>
+            <span class="area-pill">Cape Cod</span>
+            <span class="area-pill">Framingham</span>
+            <span class="area-pill">Lowell</span>
+            <span class="area-pill">+ All MA Communities</span>
+        </div>
+        <p class="area-note">Don't see your area? Call us — we likely serve your community too.</p>
+    </div>
+</div>
 
 <section class="contact section" id="contact">
     <div class="container">
@@ -467,5 +625,12 @@ function closeM(){document.getElementById('menu').classList.remove('open');}
 const obs=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add('visible');});},{threshold:.02,rootMargin:'0px 0px 80px 0px'});
 document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
 </script>
+
+<div class="sticky-call">
+    <a href="tel:+15083755781">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now — (508) 375-5781
+    </a>
+</div>
 </body>
 </html>
